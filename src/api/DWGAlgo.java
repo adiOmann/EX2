@@ -44,20 +44,21 @@ public class DWGAlgo implements DirectedWeightedGraphAlgorithms {
     //Returns true if and only if (iff) there is a valid path from each node to each
     // other node. NOTE: assume directional graph (all n*(n-1) ordered pairs).
     public boolean isConnected() {
-
+        return false;
     }
 
     @Override
     //Computes the length of the shortest path between src to dest
     public double shortestPathDist(int src, int dest) {
-        List<NodeData> temp = shortestPath(src, dest);
-        if (temp == null) {
-            return -1;
-        }
-        if (this.g.getNode(dest).getWeight() != Infi) {
-            return this.g.getNode(dest).getWeight();
 
-        }
+        List<NodeData> temp = shortestPath(src, dest);
+        if (temp == null)
+            return -1;
+
+        if (this.g.getNode(dest).getWeight() != Infi){
+            return this.g.getNode(dest).getWeight();}
+
+        return -1;
     }
     private void Dijkstra(Node src, Node dest) {
         Iterator<NodeData> i= g.nodeIter();
