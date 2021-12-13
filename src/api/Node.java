@@ -9,11 +9,13 @@ public class Node implements NodeData{
     private double weight;
     private String info;
     private int Tag;
+    private NodeData father;
 
 
     public Node(int id,GeoLocation location){
         this.id=id;
         this.location= new Glocation(location.x(),location.y(),location.z());
+        this.info=null;
 
     }
 
@@ -60,6 +62,14 @@ public class Node implements NodeData{
 
     }
 
+    public NodeData getFather() {
+        return father;
+    }
+
+    public void setFather(NodeData father) {
+        this.father = father;
+    }
+
     @Override
     public int getTag() {
         return this.Tag;
@@ -70,4 +80,5 @@ public class Node implements NodeData{
         this.Tag=t;
 
     }
+
 }
