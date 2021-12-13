@@ -7,7 +7,7 @@ Introduction In this project we performed object programming of a weighted direc
 
 This class is an implementation of DirectedWeightedGraphAlgorithms interface. This class represents a Direct Weighted Graph Theory Algorithm. init - This function inits the graph on which this set of algorithms operates on. getGraph - This function returns the underlying graph of whic this class works. copy - Computes a deep copy of this weighted graph. isConnected - Returns true if and only if (iff) there is a valid path from each node to each other node. shortestPathDist - Computes the length of the shortest path between src to dest. The method used Dijkstra's algorithms. shortestPath - returns the shortest path between src to dest - as an ordered List of nodes:src --> n1 --> n2 --> ... --> dest. save - saves this weighted directed graph to the given file name. load - loads a graph to this graph algorithm.
 
-###Auxiliary functions###
+###Auxiliary functions
 
 Dijkstra (NodeData src, NodeData dest) - This function based on Dijkstra algorithm. The function is an algorithm for finding the shortest paths between nodes in a graph.
 
