@@ -25,14 +25,14 @@ public class DWgraph implements DirectedWeightedGraph {
     private int MC;
 
 
-    //public DWgraph() {
-    //   this.MC = 0;
-    //  this.NodeMap = new HashMap <Integer, NodeData>();
-    //  this.EdgeMap = new HashMap <Integer, HashMap <Integer, EdgeData>>();
-    //  this.Map_for_dest = new HashMap <Integer, HashMap <Integer, EdgeData>> ();
-    //   this.edge_size = 0;
+    public DWgraph() {
+      this.MC = 0;
+      this.NodeMap = new HashMap <Integer, NodeData>();
+      this.EdgeMap = new HashMap <Integer, HashMap <Integer, EdgeData>>();
+      this.Map_for_dest = new HashMap <Integer, HashMap <Integer, EdgeData>> ();
+      this.edge_size = 0;
 
-    // }
+     }
 
     public DWgraph(String filename) throws FileNotFoundException {
         NodeMap = new HashMap<Integer, NodeData>();
@@ -109,6 +109,8 @@ public class DWgraph implements DirectedWeightedGraph {
         this.MC = g.MC;
     }
 
+
+
     @Override
     //return the NodeData by the node_id, null if none.
     public NodeData getNode(int key) {
@@ -154,7 +156,7 @@ public class DWgraph implements DirectedWeightedGraph {
                     edge_size--;}
 
                 EdgeMap.get(src).put(dest, Edge);
-                Map_for_dest.get(dest).put(src, Edge);
+                Map_for_dest.get(dest).put(dest, Edge);
                 edge_size++;
                 MC++;
             }
