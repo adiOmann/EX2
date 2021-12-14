@@ -1,6 +1,4 @@
-import api.DWgraph;
-import api.DirectedWeightedGraph;
-import api.DirectedWeightedGraphAlgorithms;
+import api.*;
 
 import java.io.FileNotFoundException;
 
@@ -10,36 +8,36 @@ import java.io.FileNotFoundException;
 public class Ex2 {
     /**
      * This static function will be used to test your implementation
+     *
      * @param json_file - a json file (e.g., G1.json - G3.gson)
      * @return
      */
     public static DirectedWeightedGraph getGrapg(String json_file) throws FileNotFoundException {
         DirectedWeightedGraph ans = null;
-        ans= new DWgraph(json_file);
+        ans = new DWgraph(json_file);
         return ans;
     }
+
     /**
      * This static function will be used to test your implementation
+     *
      * @param json_file - a json file (e.g., G1.json - G3.gson)
      * @return
      */
-    public static DirectedWeightedGraphAlgorithms getGrapgAlgo(String json_file) {
-        DirectedWeightedGraphAlgorithms ans = null;
-        // ****** Add your code here ******
-        //
-        // ********************************
+    public static DirectedWeightedGraphAlgorithms getGrapgAlgo(String json_file) throws FileNotFoundException {
+        DirectedWeightedGraphAlgorithms ans = new DWGAlgo();
+        ans.load(json_file);
         return ans;
     }
+
     /**
      * This static function will run your GUI using the json fime.
+     *
      * @param json_file - a json file (e.g., G1.json - G3.gson)
-     *
-     *
      */
-    public static void runGUI(String json_file) {
+    public static void runGUI(String json_file) throws FileNotFoundException {
         DirectedWeightedGraphAlgorithms alg = getGrapgAlgo(json_file);
-        // ****** Add your code here ******
-        //
-        // ********************************
+        Gui gui = new Gui();
+        gui.setVisible(true);
     }
 }

@@ -12,6 +12,8 @@ public class Gui extends JFrame implements ActionListener{
     private JMenuBar menuBar;
     private JMenu file, func, edit;
     private JMenuItem exit, load, save, addE, addN, removeE, removeN, center, shortest, TSP;
+    private JLabel label;
+
 
     ImageIcon icon = new ImageIcon("src//api//plus_2795.png");
 
@@ -22,6 +24,10 @@ public class Gui extends JFrame implements ActionListener{
         this.setTitle("Menus");
         this.setVisible(true);
         this.setLayout (new FlowLayout());
+        //Create a label
+        label = new JLabel("Hey! Please click on your request from the graph.");
+        this.label.setHorizontalAlignment (JLabel.CENTER);
+        this.add (label, BorderLayout.NORTH);
 
 
         menuBar = new JMenuBar();
@@ -57,6 +63,9 @@ public class Gui extends JFrame implements ActionListener{
 
 
         load.addActionListener(this);
+
+
+
         save.addActionListener(this);
         exit.addActionListener(this);
         shortest.addActionListener(this);
