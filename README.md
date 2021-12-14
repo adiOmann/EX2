@@ -4,8 +4,7 @@ Written by Adi Finkelman and Adi Miller
 Introduction In this project we performed object programming of a weighted directed graph. The project consist 5 classes, 3 interfaces and 3 test class. The project implemented a number of algorithms of operations that can be done on graphs. At the end of the project we created a graph ourselves that implemented all the functions and algorithms we wrote.
 
 
-![](src/d6496dbd-fa14-4874-a98a-c4b7bd69a4d9.jfif)
-
+<img src="src/d6496dbd-fa14-4874-a98a-c4b7bd69a4d9.jfif" width=560 heiight=400>
 
 ## #DWGAlgo Class
 
