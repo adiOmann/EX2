@@ -25,4 +25,8 @@ This interface represents the set of operations applicable on a directional edge
 
 ##GeoLocation Interface
 
-This interface represents a geolocation <x,y,z>, (aka Point3D data).
+This interface represents a geolocation <x,y,z>.
+
+![](src/d6496dbd-fa14-4874-a98a-c4b7bd69a4d9.jfif)
+
+
