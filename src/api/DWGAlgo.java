@@ -171,6 +171,30 @@ public class DWGAlgo implements DirectedWeightedGraphAlgorithms {
 
     @Override
     public NodeData center() {
+        if (isConnected()){
+            double min = Double.MAX_VALUE;
+            NodeData center = null;
+            NodeData tmpCenter = null;
+            Iterator<NodeData> iter = g.nodeIter();
+            while (iter.hasNext()){
+                NodeData tmp = iter.next();
+                Dijkstra((Node) tmp, null);
+                double max = Double.MIN_VALUE;
+                Iterator<NodeData> iter2 = g.nodeIter();
+                while (iter2.hasNext()){
+                    NodeData tmp2 = iter2.next();
+                    if (tmp2.getWeight() > max){
+                        max = tmp2.getWeight();
+                        tmpCenter = tmp2;
+                    }
+                }
+                if (max < min){
+                    min = max;
+                    center = tmpCenter;
+                }
+            }
+            return center;
+        }
         return null;
     }
 
